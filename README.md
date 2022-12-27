@@ -26,7 +26,7 @@ mkdir $HOME/custom-metrics/peersin
 mkdir $HOME/custom-metrics/tmp
 sudo mkdir /root/scripts
 ```
-# Copy scripts into directorie and adapt
+# Copy scripts into directory and adapt
 
 Relay node :
 - peersin-relay.sh -> /root/scripts
