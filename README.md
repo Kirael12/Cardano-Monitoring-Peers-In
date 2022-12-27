@@ -45,4 +45,27 @@ sudo chmod +x /root/scripts/peersin_Results.sh
 sudo chmod +x /root/scripts/peersin.sh
 ```
 
+# Create Cronjob check
 
+Now we create a root cronjob that will check every 1 minute the IN connections on your Cardano Node, and export it to Prometheus
+```shell
+sudo crontab -e
+```
+Add this line on Relay node crontab :
+
+*/1 * * * * /root/scripts/peersin-relay.sh && /root/scripts/peersin-scrap.sh
+
+Add this line on BP node crontab :
+
+*/1 * * * * /root/scripts/peersin-bp.sh && /root/scripts/peersin_scrap.sh
+
+# Grafana
+
+On your Grafana Server, you should now be able to see the custom metric “network_peers_in_count” when exploring your Prometheus Datasource :
+
+
+![cardano-prometheus-node-exporter](https://user-images.githubusercontent.com/113426048/209671896-9aa2f8cb-38ec-42da-8a84-ba9334f19414.jpg)
+
+And add it to your Dashboard
+
+![grafana-cardano-dashboard-peers-in](https://user-images.githubusercontent.com/113426048/209671941-2e7a4751-7ce5-4c04-ba5b-b70dc808844f.jpg)
