@@ -16,4 +16,11 @@ Monitoring Peers OUT Connections is a metric available out of the box, when you 
 
 # Create script directories
 
+```shell
+mkdir $HOME/custom-metrics/peersin
+mkdir $HOME/custom-metrics/tmp
+sudo mkdir /root/scripts
+```
+
+
 
