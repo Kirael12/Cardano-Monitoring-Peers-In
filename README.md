@@ -69,3 +69,7 @@ On your Grafana Server, you should now be able to see the custom metric “netwo
 And add it to your Dashboard
 
 ![grafana-cardano-dashboard-peers-in](https://user-images.githubusercontent.com/113426048/209671941-2e7a4751-7ce5-4c04-ba5b-b70dc808844f.jpg)
+
+# Changelog
+
+04/2023 : Minor corrections
